@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name = "buttonWidth">63dp</dimen>
+    <dimen name = "buttonHeight">46dp</dimen>
+    <dimen name = "spaceBetweenButton">43dp</dimen>
+    <dimen name = "spaceUpBetweenButton">58dp</dimen>
+    <dimen name = "symbolSize">14dp</dimen>
+</resources>
