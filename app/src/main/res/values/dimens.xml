@@ -5,4 +5,6 @@
     <dimen name = "spaceBetweenButton">43dp</dimen>
     <dimen name = "spaceUpBetweenButton">58dp</dimen>
     <dimen name = "symbolSize">14dp</dimen>
+    <dimen name = "edgeToNumInput">16dp</dimen>
+    <dimen name = "topButtonToInput">43dp</dimen>
 </resources>
