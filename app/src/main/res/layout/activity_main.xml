@@ -67,29 +67,29 @@
         android:onClick="buttonSelected"
         android:text="÷"
         android:textSize="@dimen/symbolSize"
-        app:layout_constraintStart_toEndOf="@+id/buttonRightParentheses"
+        app:layout_constraintStart_toEndOf="@+id/buttonE"
         app:layout_constraintTop_toBottomOf="@+id/textViewInputExpression" />
 
     <Button
-        android:id="@+id/buttonRightParentheses"
+        android:id="@+id/buttonE"
         android:layout_width="@dimen/buttonWidth"
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/topButtonToInput"
         android:onClick="buttonSelected"
-        android:text=")"
+        android:text="e"
         android:textSize="@dimen/symbolSize"
-        app:layout_constraintStart_toEndOf="@+id/buttonLeftParentheses"
+        app:layout_constraintStart_toEndOf="@+id/buttonPi"
         app:layout_constraintTop_toBottomOf="@+id/textViewInputExpression" />
 
     <Button
-        android:id="@+id/buttonLeftParentheses"
+        android:id="@+id/buttonPi"
         android:layout_width="@dimen/buttonWidth"
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/topButtonToInput"
         android:onClick="buttonSelected"
-        android:text="("
+        android:text="π"
         android:textSize="@dimen/symbolSize"
         app:layout_constraintStart_toEndOf="@+id/buttonClear"
         app:layout_constraintTop_toBottomOf="@+id/textViewInputExpression" />
@@ -114,7 +114,7 @@
         android:onClick="buttonSelected"
         android:text="2"
         app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLeftParentheses" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonPi" />
 
     <Button
         android:id="@+id/button3"
@@ -125,7 +125,7 @@
         android:onClick="buttonSelected"
         android:text="3"
         app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRightParentheses" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonE" />
 
     <Button
         android:id="@+id/buttonPlus"

@@ -21,8 +21,9 @@ public class MainActivity extends AppCompatActivity {
     double numInput1;
     // numInput2 is the second number in the expression
     double numInput2;
+    // numberInputFull is the full string with the two input numbers, the operation, and the answer
     String numberInputFull = "";
-
+    // result is the answer to whatever operation was inputted
     double result;
     public void buttonSelected(View v){
         TextView input1TV = findViewById(R.id.textViewInputExpression);
@@ -54,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
             numberInputFull = "";
         }else if(v.getId() == R.id.buttonDecimal){
             numberInputFull += ".";
-        }else if(v.getId() == R.id.buttonLeftParentheses){
-            numberInputFull += "(";
-        }else if(v.getId() == R.id.buttonRightParentheses){
-            numberInputFull += ")";
+        }else if(v.getId() == R.id.buttonPi){
+            numberInputFull += Math.PI;
+        }else if(v.getId() == R.id.buttonE){
+            numberInputFull += Math.E;
         }else if(v.getId() == R.id.buttonDivide){
             if(!isOperationDuplicate()){
                 numberInputFull += " ÷ ";
@@ -92,27 +93,33 @@ public class MainActivity extends AppCompatActivity {
             if(numberInputFull.indexOf("÷") != -1){
                 numInput2 = Double.valueOf(numberInputFull.substring(numberInputFull.indexOf("÷") + 2));
                 result = numInput1/numInput2;
-                numberInputFull += " = " + result;
+                numberInputFull += "\n= " + result;
                 input1TV.setText(numberInputFull);
             }else if(numberInputFull.indexOf("×") != -1) {
                 numInput2 = Double.valueOf(numberInputFull.substring(numberInputFull.indexOf("×") + 2));
                 result = numInput1 * numInput2;
-                numberInputFull += " = " + result;
+                numberInputFull += "\n=" + result;
                 input1TV.setText(numberInputFull);
             }else if(numberInputFull.indexOf("+") != -1){
                 numInput2 = Double.valueOf(numberInputFull.substring(numberInputFull.indexOf("+") + 2));
                 result = numInput1 + numInput2;
-                numberInputFull += " = " + result;
+                numberInputFull += "\n=" + result;
                 input1TV.setText(numberInputFull);
             }else if(numberInputFull.indexOf("-") != -1){
                 numInput2 = Double.valueOf(numberInputFull.substring(numberInputFull.indexOf("-") + 2));
                 result = numInput1 - numInput2;
-                numberInputFull += " = " + result;
+                numberInputFull += "\n=" + result;
                 input1TV.setText(numberInputFull);
             }
         }
         input1TV.setText(numberInputFull);
     }
+
+    // How to end input to only allow two input numbers
+    // How to reset numberInputFull after result is outputted, so user can do a different operation?
+
+    // This function checks to see that the user did not do another operation, therefore limiting
+    // the input to two numbers and 1 operation
     public boolean isOperationDuplicate(){
         if(numberInputFull.indexOf("+") != -1 || numberInputFull.indexOf("-") != -1
                 || numberInputFull.indexOf("×") != -1 || numberInputFull.indexOf("÷") != -1){
