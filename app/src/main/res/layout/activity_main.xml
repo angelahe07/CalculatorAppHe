@@ -13,12 +13,13 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:onClick="buttonSelected"
         android:text="9"
         app:layout_constraintStart_toEndOf="@+id/button8"
         app:layout_constraintTop_toBottomOf="@+id/button6" />
 
-    <EditText
-        android:id="@+id/editTextFirstInputNum"
+    <TextView
+        android:id="@+id/textViewFirstInputNum"
         android:layout_width="@dimen/inputBoxWidth"
         android:layout_height="102dp"
         android:layout_marginStart="@dimen/edgeMargin"
@@ -29,19 +30,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewOperation"
         android:layout_width="63dp"
         android:layout_height="59dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="85dp"
         android:layout_marginEnd="12dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/editTextSecondInputNum"
-        app:layout_constraintStart_toEndOf="@+id/editTextFirstInputNum"
+        app:layout_constraintEnd_toStartOf="@+id/textViewSecondInputNum"
+        app:layout_constraintStart_toEndOf="@+id/textViewFirstInputNum"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextSecondInputNum"
+    <TextView
+        android:id="@+id/textViewSecondInputNum"
         android:layout_width="@dimen/inputBoxWidth"
         android:layout_height="102dp"
         android:layout_marginTop="70dp"
@@ -57,6 +57,7 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:onClick="buttonSelected"
         android:text="."
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/button0"
@@ -68,11 +69,12 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/edgeMargin"
         android:layout_marginTop="40dp"
+        android:onClick="buttonSelected"
         android:text="@string/back"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textSize="6sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextFirstInputNum" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewFirstInputNum" />
 
     <Button
         android:id="@+id/buttonDivide"
@@ -80,32 +82,35 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="40dp"
+        android:onClick="buttonSelected"
         android:text="÷"
         android:textSize="@dimen/symbolSize"
-        app:layout_constraintStart_toEndOf="@+id/buttonDivide2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSecondInputNum" />
+        app:layout_constraintStart_toEndOf="@+id/buttonRightParentheses"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSecondInputNum" />
 
     <Button
-        android:id="@+id/buttonDivide2"
+        android:id="@+id/buttonRightParentheses"
         android:layout_width="@dimen/buttonWidth"
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="40dp"
+        android:onClick="buttonSelected"
         android:text=")"
         android:textSize="@dimen/symbolSize"
-        app:layout_constraintStart_toEndOf="@+id/buttonDivide3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSecondInputNum" />
+        app:layout_constraintStart_toEndOf="@+id/buttonLeftParentheses"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSecondInputNum" />
 
     <Button
-        android:id="@+id/buttonDivide3"
+        android:id="@+id/buttonLeftParentheses"
         android:layout_width="@dimen/buttonWidth"
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="40dp"
+        android:onClick="buttonSelected"
         android:text="("
         android:textSize="@dimen/symbolSize"
         app:layout_constraintStart_toEndOf="@+id/buttonBack"
-        app:layout_constraintTop_toBottomOf="@+id/editTextFirstInputNum" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewFirstInputNum" />
 
     <Button
         android:id="@+id/button1"
@@ -113,6 +118,7 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/edgeMargin"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:onClick="buttonSelected"
         android:text="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonBack" />
@@ -123,9 +129,10 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:onClick="buttonSelected"
         android:text="2"
         app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDivide3" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLeftParentheses" />
 
     <Button
         android:id="@+id/button3"
@@ -133,9 +140,10 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:onClick="buttonSelected"
         android:text="3"
         app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDivide2" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonRightParentheses" />
 
     <Button
         android:id="@+id/buttonPlus"
@@ -143,6 +151,7 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:onClick="buttonSelected"
         android:text="+"
         android:textAlignment="center"
         android:textSize="@dimen/symbolSize"
@@ -162,6 +171,7 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:onClick="buttonSelected"
         android:text="5"
         app:layout_constraintStart_toEndOf="@+id/button4"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
@@ -172,6 +182,7 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/edgeMargin"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:onClick="buttonSelected"
         android:text="4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
@@ -182,6 +193,7 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:onClick="buttonSelected"
         android:text="6"
         app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
@@ -192,6 +204,7 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:onClick="buttonSelected"
         android:text="-"
         android:textSize="@dimen/symbolSize"
         app:layout_constraintStart_toEndOf="@+id/button6"
@@ -203,6 +216,7 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:onClick="buttonSelected"
         android:text="×"
         android:textSize="@dimen/symbolSize"
         app:layout_constraintStart_toEndOf="@+id/button9"
@@ -214,6 +228,7 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:onClick="buttonSelected"
         android:text="8"
         app:layout_constraintStart_toEndOf="@+id/button7"
         app:layout_constraintTop_toBottomOf="@+id/button5" />
@@ -224,6 +239,7 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/edgeMargin"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:onClick="buttonSelected"
         android:text="7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4" />
@@ -234,16 +250,18 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:onClick="buttonSelected"
         android:text="0"
-        app:layout_constraintStart_toEndOf="@+id/button10"
+        app:layout_constraintStart_toEndOf="@+id/buttonNegative"
         app:layout_constraintTop_toBottomOf="@+id/button8" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/buttonNegative"
         android:layout_width="@dimen/buttonWidth"
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/edgeMargin"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:onClick="buttonSelected"
         android:text="(-)"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -255,7 +273,8 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
-        android:text="Enter"
+        android:onClick="buttonSelected"
+        android:text="@string/enter"
         android:textAlignment="center"
         android:textSize="6sp"
         app:layout_constraintStart_toEndOf="@+id/buttonDecimal"
