@@ -15,6 +15,7 @@
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
         android:onClick="buttonSelected"
         android:text="9"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toEndOf="@+id/button8"
         app:layout_constraintTop_toBottomOf="@+id/button6" />
 
@@ -25,9 +26,15 @@
         android:layout_marginStart="@dimen/edgeMargin"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="@dimen/edgeMargin"
+        android:background="@color/md_theme_light_surfaceVariant"
+        android:drawablePadding="14dp"
+        android:drawableTint="@color/md_theme_light_surfaceVariant"
         android:ems="10"
+        android:gravity="center|center_horizontal|center_vertical"
         android:inputType="number"
+        android:scrollHorizontally="false"
         android:textAlignment="center"
+        android:textColor="@color/md_theme_light_primary"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +49,7 @@
         android:onClick="buttonSelected"
         android:text="."
         android:textSize="20sp"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toEndOf="@+id/button0"
         app:layout_constraintTop_toBottomOf="@+id/button9" />
 
@@ -51,10 +59,14 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/edgeMargin"
         android:layout_marginTop="@dimen/topButtonToInput"
+        android:backgroundTint="@color/md_theme_light_secondaryContainer"
         android:onClick="buttonSelected"
         android:text="@string/clear"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/md_theme_dark_primaryContainer"
         android:textSize="@dimen/fontSizeButton"
+        app:cornerRadius="@dimen/buttonRadius"
+        app:iconPadding="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewInputExpression" />
 
@@ -64,9 +76,12 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/topButtonToInput"
+        android:backgroundTint="@color/md_theme_light_secondaryContainer"
         android:onClick="buttonSelected"
         android:text="÷"
+        android:textColor="@color/md_theme_light_primary"
         android:textSize="@dimen/symbolSize"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toEndOf="@+id/buttonE"
         app:layout_constraintTop_toBottomOf="@+id/textViewInputExpression" />
 
@@ -76,9 +91,12 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/topButtonToInput"
+        android:backgroundTint="@color/md_theme_light_secondaryContainer"
         android:onClick="buttonSelected"
         android:text="e"
+        android:textColor="@color/md_theme_light_primary"
         android:textSize="@dimen/symbolSize"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toEndOf="@+id/buttonPi"
         app:layout_constraintTop_toBottomOf="@+id/textViewInputExpression" />
 
@@ -88,9 +106,12 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/topButtonToInput"
+        android:backgroundTint="@color/md_theme_light_secondaryContainer"
         android:onClick="buttonSelected"
         android:text="π"
+        android:textColor="@color/md_theme_light_primary"
         android:textSize="@dimen/symbolSize"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toEndOf="@+id/buttonClear"
         app:layout_constraintTop_toBottomOf="@+id/textViewInputExpression" />
 
@@ -102,6 +123,7 @@
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
         android:onClick="buttonSelected"
         android:text="1"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
 
@@ -113,6 +135,7 @@
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
         android:onClick="buttonSelected"
         android:text="2"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toEndOf="@+id/button1"
         app:layout_constraintTop_toBottomOf="@+id/buttonPi" />
 
@@ -124,6 +147,7 @@
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
         android:onClick="buttonSelected"
         android:text="3"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/buttonE" />
 
@@ -133,10 +157,13 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:backgroundTint="@color/md_theme_light_secondaryContainer"
         android:onClick="buttonSelected"
         android:text="+"
         android:textAlignment="center"
+        android:textColor="@color/md_theme_light_primary"
         android:textSize="@dimen/symbolSize"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
 
@@ -155,6 +182,7 @@
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
         android:onClick="buttonSelected"
         android:text="5"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toEndOf="@+id/button4"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
@@ -166,6 +194,7 @@
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
         android:onClick="buttonSelected"
         android:text="4"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
 
@@ -177,6 +206,7 @@
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
         android:onClick="buttonSelected"
         android:text="6"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
@@ -186,9 +216,13 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:backgroundTint="@color/md_theme_light_secondaryContainer"
         android:onClick="buttonSelected"
         android:text="-"
+        android:textColor="@color/md_theme_light_primary"
         android:textSize="@dimen/symbolSize"
+        app:cornerRadius="@dimen/buttonRadius"
+        app:iconTint="@color/md_theme_light_tertiaryContainer"
         app:layout_constraintStart_toEndOf="@+id/button6"
         app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
 
@@ -198,9 +232,12 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:backgroundTint="@color/md_theme_light_secondaryContainer"
         android:onClick="buttonSelected"
         android:text="×"
+        android:textColor="@color/md_theme_light_primary"
         android:textSize="@dimen/symbolSize"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toEndOf="@+id/button9"
         app:layout_constraintTop_toBottomOf="@+id/buttonSubtract" />
 
@@ -212,6 +249,7 @@
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
         android:onClick="buttonSelected"
         android:text="8"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toEndOf="@+id/button7"
         app:layout_constraintTop_toBottomOf="@+id/button5" />
 
@@ -223,6 +261,7 @@
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
         android:onClick="buttonSelected"
         android:text="7"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4" />
 
@@ -234,6 +273,7 @@
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
         android:onClick="buttonSelected"
         android:text="0"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toEndOf="@+id/buttonNegative"
         app:layout_constraintTop_toBottomOf="@+id/button8" />
 
@@ -246,6 +286,7 @@
         android:onClick="buttonSelected"
         android:text="(-)"
         android:textSize="12sp"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button7" />
 
@@ -255,10 +296,13 @@
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="@dimen/spaceBetweenButton"
         android:layout_marginTop="@dimen/spaceUpBetweenButton"
+        android:backgroundTint="@color/md_theme_light_secondaryContainer"
         android:onClick="buttonSelected"
         android:text="@string/enter"
         android:textAlignment="center"
+        android:textColor="@color/md_theme_light_primary"
         android:textSize="@dimen/fontSizeButton"
+        app:cornerRadius="@dimen/buttonRadius"
         app:layout_constraintStart_toEndOf="@+id/buttonDecimal"
         app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
 

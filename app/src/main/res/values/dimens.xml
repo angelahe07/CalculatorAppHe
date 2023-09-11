@@ -4,10 +4,11 @@
     <dimen name = "buttonHeight">50dp</dimen>
     <dimen name = "spaceBetweenButton">26dp</dimen>
     <dimen name = "spaceUpBetweenButton">58dp</dimen>
-    <dimen name = "symbolSize">14dp</dimen>
+    <dimen name = "symbolSize">16dp</dimen>
     <dimen name = "edgeMargin">10dp</dimen>
     <dimen name = "topButtonToInput">43dp</dimen>
     <dimen name = "inputBoxWidth">358dp</dimen>
     <dimen name = "inputBoxHeight">150</dimen>
-    <dimen name = "fontSizeButton">10dp</dimen>
+    <dimen name = "fontSizeButton">12dp</dimen>
+    <dimen name = "buttonRadius">14dp</dimen>
 </resources>

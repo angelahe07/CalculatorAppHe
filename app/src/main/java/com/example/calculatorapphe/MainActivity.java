@@ -25,8 +25,14 @@ public class MainActivity extends AppCompatActivity {
     String numberInputFull = "";
     // result is the answer to whatever operation was inputted
     double result;
+
+    boolean doneEnter = false;
     public void buttonSelected(View v){
         TextView input1TV = findViewById(R.id.textViewInputExpression);
+        if(doneEnter){
+            numberInputFull = "";
+            doneEnter = false;
+        }
         if(v.getId() == R.id.button0){
             if(numberInputFull.isEmpty()){
                 numberInputFull += "";
@@ -93,24 +99,25 @@ public class MainActivity extends AppCompatActivity {
             if(numberInputFull.indexOf("÷") != -1){
                 numInput2 = Double.valueOf(numberInputFull.substring(numberInputFull.indexOf("÷") + 2));
                 result = numInput1/numInput2;
-                numberInputFull += "\n= " + result;
+                numberInputFull += " = " + result;
                 input1TV.setText(numberInputFull);
             }else if(numberInputFull.indexOf("×") != -1) {
                 numInput2 = Double.valueOf(numberInputFull.substring(numberInputFull.indexOf("×") + 2));
                 result = numInput1 * numInput2;
-                numberInputFull += "\n=" + result;
+                numberInputFull += " = " + result;
                 input1TV.setText(numberInputFull);
             }else if(numberInputFull.indexOf("+") != -1){
                 numInput2 = Double.valueOf(numberInputFull.substring(numberInputFull.indexOf("+") + 2));
                 result = numInput1 + numInput2;
-                numberInputFull += "\n=" + result;
+                numberInputFull += " = " + result;
                 input1TV.setText(numberInputFull);
             }else if(numberInputFull.indexOf("-") != -1){
                 numInput2 = Double.valueOf(numberInputFull.substring(numberInputFull.indexOf("-") + 2));
                 result = numInput1 - numInput2;
-                numberInputFull += "\n=" + result;
+                numberInputFull += " = " + result;
                 input1TV.setText(numberInputFull);
             }
+            doneEnter = true;
         }
         input1TV.setText(numberInputFull);
     }
