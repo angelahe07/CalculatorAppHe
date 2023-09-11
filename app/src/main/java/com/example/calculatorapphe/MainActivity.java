@@ -60,11 +60,17 @@ public class MainActivity extends AppCompatActivity {
         }else if(v.getId() == R.id.buttonClear){
             numberInputFull = "";
         }else if(v.getId() == R.id.buttonDecimal){
-            numberInputFull += ".";
+            if(!isDecimalDuplicate()){
+                numberInputFull += ".";
+            }
         }else if(v.getId() == R.id.buttonPi){
-            numberInputFull += Math.PI;
+            if(piOrE()){
+                numberInputFull += Math.PI;
+            }
         }else if(v.getId() == R.id.buttonE){
-            numberInputFull += Math.E;
+            if(piOrE()){
+                numberInputFull += Math.E;
+            }
         }else if(v.getId() == R.id.buttonDivide){
             if(!isOperationDuplicate()){
                 numberInputFull += " ÷ ";
@@ -130,6 +136,22 @@ public class MainActivity extends AppCompatActivity {
     public boolean isOperationDuplicate(){
         if(numberInputFull.indexOf("+") != -1 || numberInputFull.indexOf("-") != -1
                 || numberInputFull.indexOf("×") != -1 || numberInputFull.indexOf("÷") != -1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean isDecimalDuplicate(){
+        if(numberInputFull.indexOf(".") != -1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean piOrE(){
+        if(numberInputFull.isEmpty()){
             return true;
         }else{
             return false;

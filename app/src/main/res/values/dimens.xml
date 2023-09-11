@@ -11,4 +11,5 @@
     <dimen name = "inputBoxHeight">150</dimen>
     <dimen name = "fontSizeButton">12dp</dimen>
     <dimen name = "buttonRadius">14dp</dimen>
+    <dimen name = "padding">2dp</dimen>
 </resources>
