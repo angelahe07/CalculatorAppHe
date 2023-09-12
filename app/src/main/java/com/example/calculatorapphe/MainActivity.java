@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -27,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
     double result;
     // doneEnter is a boolean that states if the enter button was clicked
     boolean doneEnter = false;
+    // Makes results only show 3 decimal places
+    // Link: https://stackoverflow.com/questions/16583604/formatting-numbers-using-decimalformat
+    DecimalFormat df = new DecimalFormat("0.###");
     public void buttonSelected(View v){
         TextView input1TV = findViewById(R.id.textViewInputExpression);
         // if the enter button has been clicked, clear the screen and begin new calculation
@@ -111,13 +116,13 @@ public class MainActivity extends AppCompatActivity {
                         || numberInputFull.indexOf("×") != -1 || numberInputFull.indexOf("÷") != -1){
                 // add Pi onto screen after operation
                 Log.i("Angela", "button Pi clicked and Pi successfully amended");
-                numberInputFull += Math.PI;
+               numberInputFull += Math.PI;
             }else{
                 //multiply Pi by number if number is clicked before Pi
                 numInput1 = Double.valueOf(numberInputFull.substring(0, numberInputFull.length()));
                 numInput2 = Math.PI;
                 result = numInput1 * numInput2;
-                numberInputFull = numInput1 + " × " + numInput2 + " = " + result;
+                numberInputFull = df.format(numInput1) + " × " + df.format(numInput2) + " = " + df.format(result);
                 input1TV.setText(numberInputFull);
                 doneEnter = true;
             }
@@ -134,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                 numInput1 = Double.valueOf(numberInputFull.substring(0, numberInputFull.length()));
                 numInput2 = Math.E;
                 result = numInput1 * numInput2;
-                numberInputFull = numInput1 + " × " + numInput2 + " = " + result;
+                numberInputFull = df.format(numInput1) + " × " + df.format(numInput2) + " = " + df.format(result);
                 input1TV.setText(numberInputFull);
                 doneEnter = true;
             }
@@ -209,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
                 if(numberInputFull.indexOf("÷") < numberInputFull.length()-2){
                     numInput2 = Double.valueOf(numberInputFull.substring(numberInputFull.indexOf("÷") + 2));
                     result = numInput1/numInput2;
-                    numberInputFull += " = " + result;
+                    numberInputFull += " = " + df.format(result);
                     input1TV.setText(numberInputFull);
                 }else{
                     numberInputFull = "";
@@ -218,7 +223,7 @@ public class MainActivity extends AppCompatActivity {
                 if(numberInputFull.indexOf("×") < numberInputFull.length()-2){
                     numInput2 = Double.valueOf(numberInputFull.substring(numberInputFull.indexOf("×") + 2));
                     result = numInput1 * numInput2;
-                    numberInputFull += " = " + result;
+                    numberInputFull += " = " + df.format(result);
                     input1TV.setText(numberInputFull);
                 }else{
                     numberInputFull = "";
@@ -227,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
                 if(numberInputFull.indexOf("+") < numberInputFull.length()-2){
                     numInput2 = Double.valueOf(numberInputFull.substring(numberInputFull.indexOf("+") + 2));
                     result = numInput1 + numInput2;
-                    numberInputFull += " = " + result;
+                    numberInputFull += " = " + df.format(result);
                     input1TV.setText(numberInputFull);
                 }else{
                     numberInputFull = "";
@@ -236,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
                 if(numberInputFull.indexOf("-") < numberInputFull.length()-2){
                     numInput2 = Double.valueOf(numberInputFull.substring(numberInputFull.indexOf("-") + 2));
                     result = numInput1 - numInput2;
-                    numberInputFull += " = " + result;
+                    numberInputFull += " = " + df.format(result);
                     input1TV.setText(numberInputFull);
                 }else{
                     numberInputFull = "";
